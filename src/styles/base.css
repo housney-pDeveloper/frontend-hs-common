@@ -1,0 +1,36 @@
+/**
+ * @hs/common 기본 스타일
+ * 
+ * Pretendard 폰트 정의 및 기본 HTML 스타일
+ * 프로젝트별 index.css에서 import하여 사용하세요.
+ * 
+ * 사용법:
+ * @import './hs-common/src/styles/base.css';
+ * 
+ * 주의: 폰트 파일은 각 프로젝트의 public/fonts/ 디렉토리에 있어야 합니다.
+ */
+
+/* Pretendard Font - Regular(400), Medium(500), SemiBold(600) only */
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/Pretendard-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/Pretendard-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/Pretendard-SemiBold.woff2') format('woff2');
+}

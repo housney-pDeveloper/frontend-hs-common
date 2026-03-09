@@ -1,0 +1,82 @@
+/**
+ * @hs/common CSS 변수 정의
+ * 
+ * 이 파일은 hs-admin과 hs-app에서 공유하는 CSS 변수를 정의합니다.
+ * 프로젝트별 index.css에서 import하여 사용하세요.
+ * 
+ * 사용법:
+ * @import './hs-common/src/styles/variables.css';
+ */
+
+:root {
+  /* Base Colors */
+  --background: #FFFFFF;
+  --foreground: #1A1A1A;
+  
+  /* Popover */
+  --popover: #FFFFFF;
+  --popover-foreground: #0D0E14;
+  
+  /* Primary - Green 계열 */
+  --primary: #11C5A7;
+  --primary-gradient: linear-gradient(90deg, #19D297 0%, #0DC2F4 100%);
+  --primary-gradient2: linear-gradient(180deg, #19D2970A 0%, #0DC2F40A 48.31%, #FFFFFF0A 96.61%);
+
+  --primary-foreground: #FFFFFF;
+  --green10: #EFFAF9;
+  --green60: #70DCCA;
+  --green80: #41D1B9;
+  --green100: #11C5A7;
+  
+  /* Secondary - Blue 계열 */
+  --secondary: #00AFDF;
+  --secondary-foreground: #FFFFFF;
+  --blue10: #EBFBFF;
+  
+  /* Gray 계열 */
+  --gray1: #1A1A1A;
+  --gray2: #444444;
+  --gray3: #666666;
+  --gray4: #999999;
+  
+  /* Muted */
+  --muted: #F6F8F9;
+  --muted-foreground: #666;
+  
+  /* Accent */
+  --accent: #E8EDF3;
+  --accent-foreground: #1A1D24;
+  
+  /* Destructive (Error, Delete) */
+  --destructive: #FF453A;
+  
+  /* Border */
+  --border: #E2E8F0;
+  --border-dark: #1A1A1A;
+  
+  /* Disabled State */
+  --disabled: #F6F8F9;
+  --disabled-foreground: #999;
+  --disabled-foreground2: #CCC;
+  --disabled-background: #EAECF0;
+  
+  /* Input */
+  --input: #DDD;
+  --ring: #0D0E14;
+  
+  /* Radius */
+  --radius: 0.8rem;
+  
+  /* Point Colors */
+  --point-success: #40E193;
+  --point-navy: #1C274C;
+  --point-gray: #B9C2CE;
+}
+
+/* Dark Mode (필요시 활성화)
+.dark {
+  --background: #1A1D24;
+  --foreground: #F6F8F9;
+  ...
+}
+*/
