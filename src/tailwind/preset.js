@@ -1,12 +1,12 @@
 /**
  * @hs/common Tailwind 프리셋
- * 
+ *
  * hs-admin과 hs-app에서 공유하는 Tailwind 설정
- * 
+ *
  * 사용법 (tailwind.config.js):
  * ```js
  * import hsPreset from './hs-common/src/tailwind/preset.js'
- * 
+ *
  * export default {
  *   presets: [hsPreset],
  *   content: [...],
@@ -29,52 +29,48 @@ export default {
         sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'sans-serif'],
       },
       fontSize: {
-        // Title Typography (피그마 기준)
-        'title-1': ['3.2rem', { lineHeight: '4.6rem', fontWeight: '600' }],  // 32px
-        'title-2': ['3.2rem', { lineHeight: '4.6rem', fontWeight: '500' }],  // 32px
-        'title-3': ['2.4rem', { lineHeight: '3.2rem', fontWeight: '600' }],  // 24px
-        'title-4': ['2.0rem', { lineHeight: '3.0rem', fontWeight: '600' }],  // 20px
-        'title-5': ['2.0rem', { lineHeight: '3.0rem', fontWeight: '500' }],  // 20px
-        'title-6': ['1.8rem', { lineHeight: '2.8rem', fontWeight: '600' }],  // 18px
-        'title-7': ['1.8rem', { lineHeight: '2.8rem', fontWeight: '500' }],  // 18px
-        'title-8': ['1.6rem', { lineHeight: '2.8rem', fontWeight: '600' }],  // 16px
-        
-        // Body Typography (피그마 기준)
-        'body-1': ['1.6rem', { lineHeight: '2.8rem', fontWeight: '500' }],   // 16px
-        'body-2': ['1.6rem', { lineHeight: '2.8rem', fontWeight: '400' }],   // 16px
-        'body-3': ['1.4rem', { lineHeight: '2.0rem', fontWeight: '600' }],   // 14px
-        'body-4': ['1.4rem', { lineHeight: '2.0rem', fontWeight: '500' }],   // 14px
-        'body-5': ['1.4rem', { lineHeight: '2.0rem', fontWeight: '400' }],   // 14px
-        'body-6': ['1.2rem', { lineHeight: '2.0rem', fontWeight: '600' }],   // 12px
-        'body-7': ['1.2rem', { lineHeight: '2.0rem', fontWeight: '500' }],   // 12px
-        'body-8': ['1.2rem', { lineHeight: '2.0rem', fontWeight: '400' }],   // 12px
+        // Title Typography (px 기반)
+        'title-1': ['32px', { lineHeight: '46px', fontWeight: '600' }],
+        'title-2': ['32px', { lineHeight: '46px', fontWeight: '500' }],
+        'title-3': ['24px', { lineHeight: '32px', fontWeight: '600' }],
+        'title-4': ['20px', { lineHeight: '30px', fontWeight: '600' }],
+        'title-5': ['20px', { lineHeight: '30px', fontWeight: '500' }],
+        'title-6': ['18px', { lineHeight: '28px', fontWeight: '600' }],
+        'title-7': ['18px', { lineHeight: '28px', fontWeight: '500' }],
+        'title-8': ['16px', { lineHeight: '28px', fontWeight: '600' }],
 
-        //모바일 버전 별도
-        'm-1': ['2.6rem', { lineHeight: '3.8rem', fontWeight: '600' }],
-        'm-2': ['2.0rem', { lineHeight: '3.0rem', fontWeight: '600' }],
-        'm-3': ['2.0rem', { lineHeight: '3.0rem', fontWeight: '500' }],
-        'm-4': ['1.8rem', { lineHeight: '2.8rem', fontWeight: '600' }],
-        'm-5': ['1.8rem', { lineHeight: '2.8rem', fontWeight: '500' }],
-        'm-6': ['1.6rem', { lineHeight: '2.8rem', fontWeight: '600' }],
-        'm-7': ['1.6rem', { lineHeight: '2.8rem', fontWeight: '500' }],
-        'm-8': ['1.6rem', { lineHeight: '2.8rem', fontWeight: '400' }],
-        'm-9': ['1.4rem', { lineHeight: '2.4rem', fontWeight: '600' }],
-        'm-10': ['1.4rem', { lineHeight: '2.4rem', fontWeight: '500' }],
-        'm-11': ['1.4rem', { lineHeight: '2.4rem', fontWeight: '400' }],
-        'm-12': ['1.2rem', { lineHeight: '2.4rem', fontWeight: '400' }], 
+        // Body Typography (px 기반)
+        'body-1': ['16px', { lineHeight: '28px', fontWeight: '500' }],
+        'body-2': ['16px', { lineHeight: '28px', fontWeight: '400' }],
+        'body-3': ['14px', { lineHeight: '20px', fontWeight: '600' }],
+        'body-4': ['14px', { lineHeight: '20px', fontWeight: '500' }],
+        'body-5': ['14px', { lineHeight: '20px', fontWeight: '400' }],
+        'body-6': ['12px', { lineHeight: '20px', fontWeight: '600' }],
+        'body-7': ['12px', { lineHeight: '20px', fontWeight: '500' }],
+        'body-8': ['12px', { lineHeight: '20px', fontWeight: '400' }],
+
+        // 모바일 버전
+        'm-1': ['26px', { lineHeight: '38px', fontWeight: '600' }],
+        'm-2': ['20px', { lineHeight: '30px', fontWeight: '600' }],
+        'm-3': ['20px', { lineHeight: '30px', fontWeight: '500' }],
+        'm-4': ['18px', { lineHeight: '28px', fontWeight: '600' }],
+        'm-5': ['18px', { lineHeight: '28px', fontWeight: '500' }],
+        'm-6': ['16px', { lineHeight: '28px', fontWeight: '600' }],
+        'm-7': ['16px', { lineHeight: '28px', fontWeight: '500' }],
+        'm-8': ['16px', { lineHeight: '28px', fontWeight: '400' }],
+        'm-9': ['14px', { lineHeight: '24px', fontWeight: '600' }],
+        'm-10': ['14px', { lineHeight: '24px', fontWeight: '500' }],
+        'm-11': ['14px', { lineHeight: '24px', fontWeight: '400' }],
+        'm-12': ['12px', { lineHeight: '24px', fontWeight: '400' }],
       },
-      // spacing: 높이, 너비, 패딩, 마진, gap 등 모든 spacing 속성에 적용
-      // 0-100 값에 대해 rem 기반 spacing (1 = 0.1rem = 1px at 10px base)
+      // spacing: px 기반 (0-100px, 1:1 매핑)
       spacing: Object.fromEntries(
-        Array.from({ length: 101 }, (_, i) => {
-          const value = i / 10;
-          return [i, value % 1 === 0 ? `${value}rem` : `${value.toFixed(1)}rem`];
-        })
+        Array.from({ length: 101 }, (_, i) => [i, `${i}px`])
       ),
       borderRadius: {
         lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 0.4rem)',
-        sm: 'calc(var(--radius) - 0.4rem)'
+        md: 'calc(var(--radius) - 4px)',
+        sm: 'calc(var(--radius) - 4px)'
       },
       boxShadow: {
         'default': '2px 2px 16px 0 rgba(0, 0, 0, 0.08)',
@@ -110,7 +106,7 @@ export default {
         },
         muted: {
           DEFAULT: 'var(--muted)',
-          foreground: 'var(--muted-foreground)' 
+          foreground: 'var(--muted-foreground)'
         },
         destructive: {
           DEFAULT: 'var(--destructive)',
@@ -123,7 +119,7 @@ export default {
         },
         border: 'var(--border)',
         input: 'var(--input)',
-        
+
         // Point Colors
         'point-success': 'var(--point-success)',
         'point-navy': 'var(--point-navy)',
