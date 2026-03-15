@@ -15,3 +15,25 @@ export {
   parseApiError,
   getApiErrorMessage,
 } from './error-utils'
+
+// Entity API Factories
+export {
+  createAuthApi,
+  createCeremonyApi,
+  createCommonCodeApi,
+  createDashboardApi,
+  createNotificationApi,
+  createRecordApi,
+  createRelationshipApi,
+  createScheduleApi,
+  createStatisticsApi,
+} from './entities'
+
+export type {
+  GetCommonCodeListRequest,
+  GetCommonCodeListResponse,
+  SaveCommonCodeRequest,
+  GetCommonCodeAllRequest,
+  CommonCodeAllResponse,
+  NotificationListResponse,
+} from './entities'
