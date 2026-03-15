@@ -1,4 +1,5 @@
-import type { AxiosInstance } from 'axios'
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type ApiClient = { get<T = any>(url: string, config?: any): Promise<{ data: T }>; post<T = any>(url: string, data?: any, config?: any): Promise<{ data: T }> }
 import type { ServerResponse } from '../../types/api'
 import type { MeResponse, OrgnzSelectionResponse } from '../../types/auth'
 
@@ -8,7 +9,7 @@ type BuildApiUrl = (endpoint: string) => string
  * 인증 Entity API Factory (Read-only)
  * Write 작업(login, signup 등)은 features/auth. 구성원 초대(sendInvite)는 features/group.
  */
-export const createAuthApi = (client: AxiosInstance, buildUrl: BuildApiUrl) => ({
+export const createAuthApi = (client: ApiClient, buildUrl: BuildApiUrl) => ({
   /** GET /auth/me - 토큰 기반 사용자·조직 정보 조회 (정보 갱신·권한 재확인 등) */
   async getMe(): Promise<MeResponse> {
     const response = await client.get<ServerResponse<MeResponse>>(

@@ -1,10 +1,6 @@
-/** 통계 */
-export interface MonthlyTrend {
-  yearMonth: string
-  totalCount: number
-  totalGivenAmount: number
-  totalReceivedAmount: number
-}
+/** 통계 — MonthlyTrend는 dashboard.ts에서 정의 */
+import type { MonthlyTrend } from './dashboard'
+export type { MonthlyTrend }
 
 export interface RecordTypeDistribution {
   recordTypeCode: string

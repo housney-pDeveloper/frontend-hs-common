@@ -1,5 +1,5 @@
 /** 기록 */
-export interface Record {
+export interface MemonRecord {
   recordNo: number
   relationshipNo: number
   relationshipName: string
@@ -11,7 +11,7 @@ export interface Record {
   regDate: string
 }
 
-export interface RecordDetail extends Record {
+export interface RecordDetail extends MemonRecord {
   relationshipTypeCode: string
   modDate: string
 }

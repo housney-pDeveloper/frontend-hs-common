@@ -1,4 +1,5 @@
-import type { AxiosInstance } from 'axios'
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type ApiClient = { get<T = any>(url: string, config?: any): Promise<{ data: T }>; post<T = any>(url: string, data?: any, config?: any): Promise<{ data: T }> }
 import type { ServerResponse } from '../../types/api'
 import type { CommonCodeType, CommonCodeItem } from '../../types/commonCode'
 
@@ -32,7 +33,7 @@ export type CommonCodeAllResponse = Record<CommonCodeType, CommonCodeItem[]>
  * POST /commonCode/getAll (앱 로드 1회), /commonCode/getList, /commonCode/save
  * clientNo: 조직별 공통코드 분리 (직급·직책 등은 조직마다 다름)
  */
-export const createCommonCodeApi = (client: AxiosInstance, buildUrl: BuildApiUrl) => ({
+export const createCommonCodeApi = (client: ApiClient, buildUrl: BuildApiUrl) => ({
   async getAll(params: GetCommonCodeAllRequest): Promise<CommonCodeAllResponse> {
     const response = await client.post<ServerResponse<CommonCodeAllResponse>>(
       buildUrl('/commonCode/getAll'),

@@ -1,4 +1,5 @@
-import type { AxiosInstance } from 'axios'
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type ApiClient = { get<T = any>(url: string, config?: any): Promise<{ data: T }>; post<T = any>(url: string, data?: any, config?: any): Promise<{ data: T }> }
 import type { ServerResponse } from '../../types/api'
 import type {
   MonthlyTrend,
@@ -12,7 +13,7 @@ type BuildApiUrl = (endpoint: string) => string
 /**
  * 통계 Entity API Factory
  */
-export const createStatisticsApi = (client: AxiosInstance, buildUrl: BuildApiUrl) => ({
+export const createStatisticsApi = (client: ApiClient, buildUrl: BuildApiUrl) => ({
   async getMonthlyTrend(months = 6): Promise<MonthlyTrend[]> {
     const res = await client.post<ServerResponse<MonthlyTrend[]>>(
       buildUrl('/statistics/getMonthlyTrend'),

@@ -1,4 +1,5 @@
-import type { AxiosInstance } from 'axios'
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type ApiClient = { get<T = any>(url: string, config?: any): Promise<{ data: T }>; post<T = any>(url: string, data?: any, config?: any): Promise<{ data: T }> }
 import type { ServerResponse } from '../../types/api'
 import type {
   HomeSummary,
@@ -12,7 +13,7 @@ type BuildApiUrl = (endpoint: string) => string
 /**
  * 대시보드 Entity API Factory
  */
-export const createDashboardApi = (client: AxiosInstance, buildUrl: BuildApiUrl) => ({
+export const createDashboardApi = (client: ApiClient, buildUrl: BuildApiUrl) => ({
   async getHomeSummary(): Promise<HomeSummary> {
     const res = await client.post<ServerResponse<HomeSummary>>(
       buildUrl('/dashboard/getHomeSummary')

@@ -1,4 +1,5 @@
-import type { AxiosInstance } from 'axios'
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type ApiClient = { get<T = any>(url: string, config?: any): Promise<{ data: T }>; post<T = any>(url: string, data?: any, config?: any): Promise<{ data: T }> }
 import type { ServerResponse } from '../../types/api'
 import type { NotificationItem } from '../../types/notification'
 
@@ -19,7 +20,7 @@ export interface NotificationListResponse {
  * - 앱 로드·새로고침 시 호출하여 store 세팅
  * - WebSocket은 실시간 푸시만 담당
  */
-export const createNotificationApi = (client: AxiosInstance, buildUrl: BuildApiUrl) => ({
+export const createNotificationApi = (client: ApiClient, buildUrl: BuildApiUrl) => ({
   async getList(params: { limit?: number; afterId?: string } = {}): Promise<NotificationListResponse> {
     const queryParams = new URLSearchParams()
     if (params.limit) queryParams.set('limit', String(params.limit))

@@ -1,4 +1,5 @@
-import type { AxiosInstance } from 'axios'
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type ApiClient = { get<T = any>(url: string, config?: any): Promise<{ data: T }>; post<T = any>(url: string, data?: any, config?: any): Promise<{ data: T }> }
 import type { ServerResponse } from '../../types/api'
 import type { PageDto } from '../../types/page'
 import type {
@@ -13,7 +14,7 @@ type BuildApiUrl = (endpoint: string) => string
 /**
  * 일정 Entity API Factory
  */
-export const createScheduleApi = (client: AxiosInstance, buildUrl: BuildApiUrl) => ({
+export const createScheduleApi = (client: ApiClient, buildUrl: BuildApiUrl) => ({
   async getUpcomingList(params?: { days?: number; limit?: number }): Promise<PageDto<UpcomingSchedule>> {
     const res = await client.post<ServerResponse<PageDto<UpcomingSchedule>>>(
       buildUrl('/schedule/getUpcomingList'),
