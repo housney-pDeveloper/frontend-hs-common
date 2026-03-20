@@ -15,7 +15,7 @@ export interface RelationshipTypeInfo {
 export interface RelationshipByTag {
   relationshipNo: number
   relationshipName: string
-  relationshipTypeCode: string
+  relationshipTypeNo: number
   phoneNo?: string
 }
 

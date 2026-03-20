@@ -49,7 +49,7 @@ export interface GuestSummary {
 }
 
 export interface RelationAmount {
-  relationshipTypeCode: string
+  relationshipTypeNo: number
   label: string
   amount: number
 }
@@ -64,7 +64,7 @@ export interface CategoryAmount {
 export interface DashboardRecentRecord {
   recordNo: number
   relationshipName: string
-  relationshipTypeCode: string
+  relationshipTypeNo: number
   recordTypeCode: string
   recordDate: string
   amount: number

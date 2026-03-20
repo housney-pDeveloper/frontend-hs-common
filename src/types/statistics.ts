@@ -10,7 +10,7 @@ export interface RecordTypeDistribution {
 }
 
 export interface RelationshipTypeDistribution {
-  relationshipTypeCode: string
+  relationshipTypeNo: number
   count: number
   percentage: number
 }

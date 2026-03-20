@@ -12,7 +12,7 @@ export interface MemonRecord {
 }
 
 export interface RecordDetail extends MemonRecord {
-  relationshipTypeCode: string
+  relationshipTypeNo: number
   modDate: string
 }
 

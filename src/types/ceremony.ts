@@ -16,7 +16,7 @@ export interface Ceremony {
 }
 
 export interface CeremonyDetail extends Ceremony {
-  relationshipTypeCode?: string
+  relationshipTypeNo?: number
   modDate: string
 }
 
