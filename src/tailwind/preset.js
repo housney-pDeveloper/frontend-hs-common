@@ -62,6 +62,13 @@ export default {
         'm-10': ['17px', { lineHeight: '28px', fontWeight: '500' }],
         'm-11': ['17px', { lineHeight: '28px', fontWeight: '400' }],
         'm-12': ['15px', { lineHeight: '28px', fontWeight: '400' }],
+
+        // UI Typography
+        'caption': ['11px', { lineHeight: '16px', fontWeight: '500' }],
+        'sm': ['13px', { lineHeight: '20px', fontWeight: '400' }],
+        'stat': ['20px', { lineHeight: '28px', fontWeight: '600' }],
+        'page-title': ['20px', { lineHeight: '28px', fontWeight: '600' }],
+        'section-title': ['15px', { lineHeight: '22px', fontWeight: '600' }],
       },
       // spacing: px 기반 (0-100px, 1:1 매핑)
       spacing: Object.fromEntries(
@@ -77,53 +84,41 @@ export default {
       },
       colors: {
         background: 'var(--background)',
+        surface: 'var(--surface)',
         foreground: 'var(--foreground)',
+        'muted-foreground': 'var(--muted-foreground)',
+        placeholder: 'var(--placeholder)',
+        border: 'var(--border)',
+        'border-light': 'var(--border-light)',
+        'row-hover': 'var(--row-hover)',
+        'row-zebra': 'var(--row-zebra)',
+        'row-selected': 'var(--row-selected)',
+        destructive: 'var(--destructive)',
+        info: 'var(--info)',
         primary: {
           DEFAULT: 'var(--primary)',
-          gradient: 'var(--primary-gradient)',
+          hover: 'var(--primary-hover)',
+          light: 'var(--primary-light)',
           foreground: 'var(--primary-foreground)',
-          10: 'var(--green10)',
-          60: 'var(--green60)',
-          80: 'var(--green80)',
-          100: 'var(--green100)'
         },
-        secondary: {
-          DEFAULT: 'var(--secondary)',
-          foreground: 'var(--secondary-foreground)',
-          border: 'var(--secondary-foreground)',
-          10: 'var(--blue10)'
-        },
-        common: {
-          DEFAULT: 'var(--border-dark)',
-          foreground: 'var(--foreground)',
-          border: 'var(--border-dark)',
-        },
-        gray: {
-          1: 'var(--gray1)',
-          2: 'var(--gray2)',
-          3: 'var(--gray3)',
-          4: 'var(--gray4)',
-        },
-        muted: {
-          DEFAULT: 'var(--muted)',
-          foreground: 'var(--muted-foreground)'
-        },
-        destructive: {
-          DEFAULT: 'var(--destructive)',
-        },
+        ring: 'var(--ring)',
+        input: 'var(--input)',
         disabled: {
           DEFAULT: 'var(--disabled)',
           foreground: 'var(--disabled-foreground)',
-          foreground2: 'var(--disabled-foreground2)',
-          background: 'var(--disabled-background)',
         },
-        border: 'var(--border)',
-        input: 'var(--input)',
-
-        // Point Colors
-        'point-success': 'var(--point-success)',
-        'point-navy': 'var(--point-navy)',
-        'point-gray': 'var(--point-gray)',
+        muted: {
+          DEFAULT: 'var(--surface)',
+          foreground: 'var(--muted-foreground)',
+        },
+        popover: {
+          DEFAULT: 'var(--background)',
+          foreground: 'var(--foreground)',
+        },
+        accent: {
+          DEFAULT: 'var(--row-hover)',
+          foreground: 'var(--foreground)',
+        },
       },
       keyframes: {
         'accordion-down': {
@@ -142,41 +137,8 @@ export default {
     }
   },
   plugins: [
-    // Gradient 유틸리티 플러그인
     function({ addUtilities }) {
       addUtilities({
-        '.bg-primary-gradient': {
-          position: 'relative',
-          'background-image': 'var(--primary-gradient)',
-          '&::before': {
-            content: '""',
-            position: 'absolute',
-            inset: '0',
-            'background-color': 'var(--green80)',
-            opacity: '0',
-            transition: 'opacity 0.2s ease-in-out',
-            'border-radius': 'inherit',
-            'z-index': '-1',
-          },
-          '&:hover:not(:disabled)::before': {
-            opacity: '1',
-          },
-          '&:disabled': {
-            'background-image': 'none',
-            'background-color': 'var(--disabled)',
-          },
-        },
-        '.border-primary-gradient': {
-          border: '2px solid transparent',
-          background: 'linear-gradient(var(--background), var(--background)) padding-box, var(--primary-gradient) border-box',
-          'background-clip': 'padding-box, border-box',
-        },
-        '.text-primary-gradient': {
-          backgroundImage: 'var(--primary-gradient)',
-          "-webkit-background-clip": 'text',
-          "background-clip": 'text',
-          color: 'transparent',
-        },
         '.scrollbar-gutter-stable': {
           "scrollbar-gutter": "stable",
         },
