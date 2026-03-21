@@ -28,6 +28,7 @@ export interface Relationship {
   phoneNo?: string
   memo?: string
   birthday?: string
+  firstMetYear?: number
   tags?: RelationshipTagInfo[]
   regDate: string
   totalRecordCount?: number
@@ -95,6 +96,7 @@ export interface CreateRelationshipRequest {
   phoneNo?: string
   memo?: string
   birthday?: string
+  firstMetYear?: number
   anniversaries?: { anniversaryDate: string; title: string; memo?: string }[]
   tags?: { tagName: string; tagColor: string }[]
 }

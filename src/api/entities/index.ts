@@ -1,4 +1,5 @@
 export { createAuthApi } from './authApi'
+export { createBudgetApi } from './budgetApi'
 export { createCeremonyApi } from './ceremonyApi'
 export { createCommonCodeApi } from './commonCodeApi'
 export type {
@@ -12,6 +13,7 @@ export { createDashboardApi } from './dashboardApi'
 export { createNotificationApi } from './notificationApi'
 export type { NotificationListResponse } from './notificationApi'
 export { createRecordApi } from './recordApi'
+export { createRecommendationApi } from './recommendationApi'
 export { createRelationshipApi } from './relationshipApi'
 export { createScheduleApi } from './scheduleApi'
 export { createStatisticsApi } from './statisticsApi'

@@ -19,11 +19,13 @@ export {
 // Entity API Factories
 export {
   createAuthApi,
+  createBudgetApi,
   createCeremonyApi,
   createCommonCodeApi,
   createDashboardApi,
   createNotificationApi,
   createRecordApi,
+  createRecommendationApi,
   createRelationshipApi,
   createScheduleApi,
   createStatisticsApi,
