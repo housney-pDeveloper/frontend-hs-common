@@ -19,3 +19,4 @@ export { type RecordTypeDistribution, type RelationshipTypeDistribution, type To
 export * from './relationshipLink'
 export * from './recommendation'
 export * from './budget'
+export * from './notificationSetting'
