@@ -9,6 +9,7 @@ export interface Ceremony {
   location?: string
   amount: number
   directionCode: string
+  hostTypeCode?: string
   attendYn: string
   memo?: string
   linkedRecordNo?: number
@@ -41,6 +42,7 @@ export interface CreateCeremonyRequest {
   location?: string
   amount?: number
   directionCode?: string
+  hostTypeCode?: string
   attendYn?: string
   memo?: string
   linkedRecordNo?: number

@@ -95,6 +95,7 @@ export default {
         'row-selected': 'var(--row-selected)',
         destructive: 'var(--destructive)',
         info: 'var(--info)',
+        'brand-deep': 'var(--brand-deep)',
         primary: {
           DEFAULT: 'var(--primary)',
           hover: 'var(--primary-hover)',

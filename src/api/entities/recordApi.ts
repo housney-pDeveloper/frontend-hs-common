@@ -33,4 +33,18 @@ export const createRecordApi = (client: ApiClient, buildUrl: BuildApiUrl) => ({
     )
     return res.data.data!
   },
+
+  async deleteRecord(recordNo: number): Promise<void> {
+    await client.post<ServerResponse<void>>(
+      buildUrl('/record/delete'),
+      { recordNo }
+    )
+  },
+
+  async deleteRecords(recordNos: number[]): Promise<void> {
+    await client.post<ServerResponse<void>>(
+      buildUrl('/record/deleteList'),
+      { recordNos }
+    )
+  },
 })

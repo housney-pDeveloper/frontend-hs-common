@@ -7,6 +7,7 @@ export interface MemonRecord {
   recordDate: string
   amount: number
   directionCode: string
+  hostTypeCode?: string
   memo?: string
   regDate: string
 }
@@ -35,6 +36,7 @@ export interface CreateRecordRequest {
   recordDate: string
   amount?: number
   directionCode?: string
+  hostTypeCode?: string
   memo?: string
 }
 
@@ -66,4 +68,14 @@ export const DIRECTION_OPTIONS = [
 export const DIRECTION_MAP: Record<string, string> = {
   GIVEN: '보낸',
   RECEIVED: '받은',
+}
+
+export const HOST_TYPE_OPTIONS = [
+  { value: 'SELF', label: '본인' },
+  { value: 'OTHER', label: '타인' },
+] as const
+
+export const HOST_TYPE_MAP: Record<string, string> = {
+  SELF: '본인',
+  OTHER: '타인',
 }

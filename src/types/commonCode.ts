@@ -16,17 +16,24 @@ export type CommonCodeType =
   | 'REPEAT_CYCLE'        // 반복 주기
   | 'GENDER'              // 성별
   | 'ORGNZ_ROLE'          // 조직 권한
+  | 'EVENT_AUTH'          // 행사 권한
+  | 'EVENT_STATUS'        // 행사 진행상태
+  | 'OFFICE_DUTY'         // 직책
+  | 'OFFICE_PSTN'         // 직급
+  | 'ORGNZ'               // 조직/부서
 
 /**
  * 공통코드 항목 (서버 응답 포맷)
  */
 export interface CommonCodeItem {
-  codeGroupId: string
+  codeGroupId?: string
   codeId: string
   codeName: string
-  sortOrder: number
+  sortOrder?: number
   description?: string | null
   useYn: 'Y' | 'N'
+  codeInit?: string
+  icon?: string
 }
 
 export type CommonCodeMap = Partial<Record<CommonCodeType, CommonCodeItem[]>>
